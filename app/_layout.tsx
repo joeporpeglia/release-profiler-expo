@@ -6,9 +6,12 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { startProfiling } from 'react-native-release-profiler';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
+
+startProfiling();
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
